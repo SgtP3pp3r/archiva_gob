@@ -1,0 +1,17 @@
+# Entorno virtual de Python
+venv/
+.venv/
+venv/
+
+# Dependencias de Next.js
+node_modules/
+
+# Archivos de entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Archivos generados
+__pycache__/
+*.pyc
+.next/
