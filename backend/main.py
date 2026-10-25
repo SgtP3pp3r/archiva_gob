@@ -13,8 +13,10 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://archiva-gob.vercel.app"
+        "https://archiva-gob.vercel.app",
+        "http://localhost:3000",
     ],
+    allow_origin_regex=r"https://archiva.*-sgtp3pp3rs-projects\.vercel\.app",
     allow_methods=["*"],
     allow_headers=["*"],
     allow_credentials=False,
