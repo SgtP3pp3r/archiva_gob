@@ -12,7 +12,9 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=CORS_ORIGINS,
+    allow_origins=[
+        "https://archiva-gob.vercel.app"
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
     allow_credentials=False,
