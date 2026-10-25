@@ -1,4 +1,4 @@
-export const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'https://archiva-gob-backend.vercel.app').replace(/\/+$/, '')
+export const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || 'https://archiva-gob-backend.vercel.app').replace(/\/+$/, '') + '/api'
 
 export async function getApiError(response: Response): Promise<string> {
   const body: unknown = await response.json().catch(() => null)
