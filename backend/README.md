@@ -33,6 +33,7 @@ pytest
 
 | Método | Ruta | Entrada | Salida |
 |---|---|---|---|
+| GET | `/` | — | Estado de la API y enlace a `/docs` |
 | POST | `/api/documents/extract` | PDF (`archivo`) | JSON: `ficha` + `validacion` |
 | POST | `/api/documents/generate` | JSON `ficha` (ya revisada) | `.docx` |
 | POST | `/api/documents/ficha?estricto=false` | PDF (`archivo`) | `.docx` directo |

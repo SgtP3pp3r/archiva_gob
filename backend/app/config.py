@@ -11,6 +11,9 @@ MAX_UPLOAD_BYTES = MAX_UPLOAD_MB * 1024 * 1024
 # Orígenes del frontend permitidos (separados por coma).
 CORS_ORIGINS = [
     o.strip()
-    for o in os.getenv("CORS_ORIGINS", "http://localhost:3000,http://localhost:5173").split(",")
+    for o in os.getenv(
+        "CORS_ORIGINS",
+        "http://localhost:3000,http://localhost:5173, https://archiva-gob.vercel.app",
+    ).split(",")
     if o.strip()
 ]

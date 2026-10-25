@@ -18,6 +18,16 @@ from tests.conftest import crear_pdf
 client = TestClient(app)
 
 
+def test_api_root():
+    response = client.get("/")
+
+    assert response.status_code == 200
+    assert response.json() == {
+        "message": "API de Fichas de Identificación",
+        "docs": "/docs",
+    }
+
+
 # ── pdf_reader ───────────────────────────────────────────────────────────────
 def test_lee_texto_e_imagenes(pdf_bytes):
     c = leer_pdf(pdf_bytes)
